@@ -69,7 +69,7 @@ Total Loss = 0.7 * MSE + 0.2 * (1 - SSIM) + 0.1 * Perceptual Loss (VGG16)
 
 2. Clone this repository:
     ```bash
-    git clone https://github.com/<your-username>/underwater-image-enhancement.git
+    git clone https://github.com/PianoDude299/Underwater-Image-Enhancement.git
     cd underwater-image-enhancement
     ```
 
