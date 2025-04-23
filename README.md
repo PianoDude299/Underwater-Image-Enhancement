@@ -81,20 +81,4 @@ Total loss used during training:
 
 ---
 
-## 🗂 Repository Structure
 
-```plaintext
-/Code/
-    └── Underwater_Image_Enhancement.ipynb
-/Documents/
-    ├── BasePaper.pdf
-    └── ReferencePapers/
-        ├── ref1.pdf
-        ├── ref2.pdf
-        └── ...
-/Presentation/
-    └── ProjectSlides.pptx (Coming soon)
-/DraftPaper/
-    ├── PaperDraft.docx (Coming soon)
-    └── PaperDraft.pdf (Coming soon)
-README.md
