@@ -68,3 +68,5 @@ The total loss used for training is:
 1. Install the required libraries:
    ```bash
    pip install torch torchvision pytorch-msssim matplotlib scikit-image pillow
+
+2. Clone the repo and move into it:
