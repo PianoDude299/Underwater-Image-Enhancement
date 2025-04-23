@@ -25,7 +25,7 @@ The project was developed for the course **BCSE403L - Digital Image Processing**
 - Images resized to **256x256** during preprocessing.
 
 ⚠️ **Note**: Due to GitHub file size restrictions, the dataset is not uploaded here.  
-Please download it separately from [UIEB Dataset Website](https://li-chongyi.github.io/proj_underwater.html).
+Please download it separately from [UIEB Dataset Website](https://li-chongyi.github.io/proj_benchmark.html).
 
 ---
 
@@ -40,9 +40,7 @@ Please download it separately from [UIEB Dataset Website](https://li-chongyi.git
 
 Total loss used during training:
 
-\[
-\text{Total Loss} = 0.7 \times \text{MSE} + 0.2 \times (1 - \text{SSIM}) + 0.1 \times \text{Perceptual Loss (VGG16)}
-\]
+Total Loss = 0.7 * MSE + 0.2 * (1 - SSIM) + 0.1 * Perceptual Loss (VGG16)
 
 **Loss Components:**
 - **MSE Loss**: Minimizes pixel-wise errors.
