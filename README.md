@@ -2,9 +2,9 @@
 
 ## 📌 Project Overview
 This project focuses on enhancing degraded underwater images using a deep learning approach.  
-We implement a **ResUNet** architecture, combined with a **composite loss function** comprising **MSE**, **SSIM**, and **Perceptual Loss (VGG16-based)**, to improve both the numerical quality (PSNR) and the perceptual realism (SSIM) of underwater images.
+We implement a **ResUNet architecture**, combined with a composite loss function of **MSE**, **SSIM**, and **Perceptual Loss (VGG16-based)**, to improve both numerical quality (PSNR) and perceptual realism (SSIM) of underwater images.
 
-The work is part of the course **BCSE403L - Digital Image Processing**, 6th Semester, VIT Chennai.
+The project was developed for the course **BCSE403L - Digital Image Processing**, Semester 6, Slot A2+TA2, VIT Chennai.
 
 ---
 
@@ -20,34 +20,34 @@ The work is part of the course **BCSE403L - Digital Image Processing**, 6th Seme
 ---
 
 ## 📂 Dataset
-- **UIEB (Underwater Image Enhancement Benchmark) Dataset**
-- Dataset includes paired raw and ground truth clean underwater images.
-- Images were resized to **256×256** for efficient training.
+- **Dataset Used**: UIEB (Underwater Image Enhancement Benchmark)
+- Contains paired raw and reference clean underwater images.
+- Images resized to **256x256** during preprocessing.
 
-⚠️ **Note**: Due to GitHub file size restrictions, the dataset is not included in this repository.  
-Please download the dataset separately from [UIEB Dataset Website](https://li-chongyi.github.io/proj_underwater.html) or request it if needed.
+⚠️ **Note**: Due to GitHub file size restrictions, the dataset is not uploaded here.  
+Please download it separately from [UIEB Dataset Website](https://li-chongyi.github.io/proj_underwater.html).
 
 ---
 
 ## 🏛 Model Architecture
 
-- **Encoder-Decoder** structure (from U-Net) with **skip connections** for better feature preservation.
-- **Residual Blocks** (from ResNet) for stable and deep feature learning.
-- Final activation with **Sigmoid** to map outputs to the range [0, 1].
+- **ResUNet**: Encoder-Decoder structure with skip connections (U-Net) + Residual Blocks (ResNet).
+- Final activation: **Sigmoid** function for mapping outputs between [0, 1].
 
 ---
 
 ## 🎯 Loss Function
 
-The total loss used for training is:
+Total loss used during training:
 
 \[
-\text{Total Loss} = 0.7 \times \text{MSE Loss} + 0.2 \times (1 - \text{SSIM}) + 0.1 \times \text{Perceptual Loss (VGG16)}
+\text{Total Loss} = 0.7 \times \text{MSE} + 0.2 \times (1 - \text{SSIM}) + 0.1 \times \text{Perceptual Loss (VGG16)}
 \]
 
-- **MSE Loss**: Minimizes pixel-wise error (improves PSNR)
-- **SSIM Loss**: Maintains structural similarity (improves edge/contrast)
-- **Perceptual Loss**: Enhances textural and visual realism using intermediate VGG16 features
+**Loss Components:**
+- **MSE Loss**: Minimizes pixel-wise errors.
+- **SSIM Loss**: Preserves structural similarity.
+- **Perceptual Loss**: Enhances textural realism using pretrained VGG16 feature maps.
 
 ---
 
@@ -55,18 +55,46 @@ The total loss used for training is:
 
 | Metric | Value |
 |--------|-------|
-| **PSNR** | 24.17 |
-| **SSIM** | 0.9450 |
+| PSNR   | 24.17 |
+| SSIM   | 0.9450 |
 
-- Achieved a significant improvement compared to basic autoencoders.
-- Outputs are visually sharper, better colored, and more natural-looking.
+✅ Significant improvement in underwater image clarity and realism compared to baseline autoencoder models.
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run the Project
 
 1. Install the required libraries:
-   ```bash
-   pip install torch torchvision pytorch-msssim matplotlib scikit-image pillow
+    ```bash
+    pip install torch torchvision pytorch-msssim matplotlib scikit-image pillow
+    ```
 
-2. Clone the repo and move into it:
+2. Clone this repository:
+    ```bash
+    git clone https://github.com/<your-username>/underwater-image-enhancement.git
+    cd underwater-image-enhancement
+    ```
+
+3. Open the Jupyter Notebook:
+    - Navigate to `/Code/Underwater_Image_Enhancement.ipynb`
+    - Run the cells sequentially for training and evaluation.
+
+---
+
+## 🗂 Repository Structure
+
+```plaintext
+/Code/
+    └── Underwater_Image_Enhancement.ipynb
+/Documents/
+    ├── BasePaper.pdf
+    └── ReferencePapers/
+        ├── ref1.pdf
+        ├── ref2.pdf
+        └── ...
+/Presentation/
+    └── ProjectSlides.pptx (Coming soon)
+/DraftPaper/
+    ├── PaperDraft.docx (Coming soon)
+    └── PaperDraft.pdf (Coming soon)
+README.md
